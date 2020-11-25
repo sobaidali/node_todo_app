@@ -1,2 +1,2 @@
-# node_todo_app
-A user can login to manage his/her todos. JWT auth is implemented using PassportJS.
+# node_todo_app with passportjs
+The end-user can login and register to manage his/her todos.
