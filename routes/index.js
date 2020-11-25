@@ -5,6 +5,6 @@ const userRoute = require('./userRoute')
 const todoRoute = require('./todoRoute')
 
 router.use('/dashboard', userRoute)
-router.use('/todoRoute', todoRoute)
+router.use('/todo', todoRoute)
 
 module.exports = router

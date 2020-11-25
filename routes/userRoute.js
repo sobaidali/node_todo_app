@@ -108,17 +108,16 @@ router.delete('/delete', async(req, res) => {
     }
 
     try {
-        const user = await User.findOneAndRemove({_id: userId}, (err, result) => {
+        const user = await User.findOneAndRemove({ _id: userId }, (err, result) => {
             if(err) {
                 res.status(500).json({ msg: "Database err." })
             }
             if(!result) {
                 return res.status(409).json({ msg: "User not found." })
             }
-            if (result) {
-                return res.status(200).json({ msg: "User deleted." })
-            }
+            return res.status(200).json({ msg: "User deleted." })
         })
+        console.log("This is user", user)
     } catch (err) {
         return res.status(500).json({ msg: "Network err." })
     }
